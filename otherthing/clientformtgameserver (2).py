@@ -18,7 +18,7 @@ class ConnectAndSendThread(threading.Thread):
             client.sendall(buf + "\n")
             if buf == "Bye":
                 break
-                # bobby #
+
 
 
 class ReadThread(threading.Thread):
@@ -31,6 +31,7 @@ class ReadThread(threading.Thread):
             buf = self.client.recv(1024)
             buf = buf.strip()
             print buf
+            print "bobby"
             if buf == "Bye":
                 break
         self.client.close()
