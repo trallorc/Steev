@@ -18,6 +18,7 @@ class ConnectAndSendThread(threading.Thread):
             client.sendall(buf + "\n")
             if buf == "Bye":
                 break
+                # bobby #
 
 
 class ReadThread(threading.Thread):
